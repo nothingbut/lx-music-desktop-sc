@@ -78,6 +78,7 @@ export const createLocalMusicInfo = async(path: string): Promise<LX.Music.MusicI
   let singer = metadata.common.artists?.length ? metadata.common.artists.map(a => a.trim()).join('、') : ''
   let interval = metadata.format.duration ? formatPlayTime(metadata.format.duration) : ''
   let albumName = metadata.common.album?.trim() ?? ''
+  let track = metadata.common.track.no?.toString() ?? '0'
 
   return {
     id: path,
@@ -87,6 +88,7 @@ export const createLocalMusicInfo = async(path: string): Promise<LX.Music.MusicI
     interval,
     meta: {
       albumName,
+      trackNo: track,
       filePath: path,
       songId: path,
       picUrl: '',

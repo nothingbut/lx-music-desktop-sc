@@ -12,6 +12,7 @@ export interface PlayerMusicInfo {
   name: string
   singer: string
   album: string
+  track: string
 }
 
 export const musicInfo = window.lxData.musicInfo = reactive<PlayerMusicInfo>({
@@ -26,6 +27,7 @@ export const musicInfo = window.lxData.musicInfo = reactive<PlayerMusicInfo>({
   name: '',
   singer: '',
   album: '',
+  track: '0'
 })
 
 export const isPlay = ref(false)

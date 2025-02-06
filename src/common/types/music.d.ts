@@ -21,6 +21,7 @@ declare namespace LX {
     interface MusicInfoMetaBase {
       songId: string | number // 歌曲ID，mg源为copyrightId，local为文件路径
       albumName: string // 歌曲专辑名称
+      trackNo: string // 歌曲音轨号
       picUrl?: string | null // 歌曲图片链接
       toggleMusicInfo?: MusicInfoOnline | null
     }
@@ -106,6 +107,7 @@ declare namespace LX {
       artist: string | null
       album: string | null
       APIC: string | null
+      TRCK: string | null
       lyrics: string | null
     }
 

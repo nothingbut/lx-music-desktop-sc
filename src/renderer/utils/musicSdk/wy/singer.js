@@ -134,6 +134,7 @@ export default {
         name: item.name,
         albumName: item.album.name,
         albumId: item.album.id,
+        track: item.no,
         songmid: item.id,
         source: 'wy',
         interval: formatPlayTime(item.duration),

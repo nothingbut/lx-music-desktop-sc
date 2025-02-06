@@ -181,6 +181,7 @@ const saveMeta = (downloadInfo: LX.Download.ListItem) => {
       artist: downloadInfo.metadata.musicInfo.singer?.replaceAll('、', ';'),
       album: downloadInfo.metadata.musicInfo.meta.albumName,
       APIC: imgUrl,
+      TRCK: downloadInfo.metadata.musicInfo.meta.trackNo,
     }, lrcData, getProxy())
   })
 }
