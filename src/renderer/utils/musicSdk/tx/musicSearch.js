@@ -98,6 +98,7 @@ export default {
         name: item.name + (item.title_extra ?? ''),
         albumName,
         albumId,
+        track: item.index_album,
         source: 'tx',
         interval: formatPlayTime(item.interval),
         songId: item.id,

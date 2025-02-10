@@ -80,6 +80,7 @@ export default (songmid) => {
       name: item.title,
       albumName,
       albumId,
+      track: item.index_album,
       source: 'tx',
       interval: formatPlayTime(item.interval),
       songId: item.id,

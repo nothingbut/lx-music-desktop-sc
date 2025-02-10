@@ -262,6 +262,7 @@ export default {
         name: item.title,
         albumName: item.album.name,
         albumId: item.album.mid,
+        track: item.index_album,
         source: 'tx',
         interval: formatPlayTime(item.interval),
         songId: item.id,
