@@ -194,6 +194,13 @@ export const getAndSetListDetail = async(id: string, source: LX.OnlineSource, pa
 
   return getListDetail(id, source, page, isRefresh).then((result: ListDetailInfo) => {
     if (key != listDetailInfo.key) return
+    if (result.list.length) {
+      console.log(result.info.name)
+      const content = result.list
+        .map(item => `${item.name},${item.singer},${item.meta.albumName},${item.meta.trackNo}`)
+        .join('\n')
+      console.log(content)
+    }
     setListDetail(result, id, page)
   }).catch((error: any) => {
     clearListDetail()
